@@ -1,0 +1,12 @@
+#payment{
+    box-shadow: 0 0 5px #ccc;
+    padding: 15px 10px;
+}
+
+#payment h2{
+    font-size: 20px;
+    color: #fe7d6a;
+    text-transform: uppercase;
+    word-spacing: 2px;
+  
+}
