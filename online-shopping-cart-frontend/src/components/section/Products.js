@@ -12,27 +12,28 @@ export class Products extends Component{
         const {products} = this.context;
 
         return(
-            
-            <div id="product">
-                {
-                    products.map(product =>(
-                    
-                        <div className="card" key={product._id}>
-                                                                                  
-                            <Link to={'product/'+product._id}>
-                                <img  id="product_img"  src={product.src} alt="" />
-                            </Link>
-                            <div className="content">
-                                <h3>
-                                    <Link to={'product/'+product._id}>{product.title}</Link>
-                                </h3>
-                                <span>${product.price}</span>
-                                <p>{product.description}</p>
-                                <button onClick={()=> this.context.addCart(product._id)}>Add To Cart</button>
+            <div id="wrapper">
+                <div id="product">
+                    {
+                        products.map(product =>(
+                        
+                            <div className="card" key={product._id}>
+                                                                                    
+                                <Link to={'product/'+product._id}>
+                                    <img  id="product_img"  src={product.src} alt="" />
+                                </Link>
+                                <div className="content">
+                                    <h3>
+                                        <Link to={'product/'+product._id}>{product.title}</Link>
+                                    </h3>
+                                    <span>${product.price}</span>
+                                    <p>{product.description}</p>
+                                    <button onClick={()=> this.context.addCart(product._id)}>Add To Cart</button>
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
+                        ))
+                    }
+                </div>
             </div>
         )
     }

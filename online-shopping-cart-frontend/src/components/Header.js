@@ -39,7 +39,7 @@ export class Header extends Component{
                     <ul className={ toggle ? "toggle" : ""}>
                         <li><Link to="/product">Home</Link></li>
                         <li><Link to="/product">Products</Link></li>
-                        <li><Link to="/logout">Logout</Link></li>
+                        <li><Link to="/">Logout</Link></li>
                         <li className="close" onClick={this.menuToggle}>
                             <img id="close_img" src={Close} alt="close icon" width="20" />
                         </li>

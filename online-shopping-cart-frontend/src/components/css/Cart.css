@@ -4,21 +4,65 @@ section .cart{
 }
 
 #cart{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 0 5px #ccc;
     padding: 15px 10px;
+    max-height: fit-content;
+    
+}
+
+.cart-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
 }
 
 #emptyCart{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 0 5px #ccc;
-    padding: 15px 10px;
+    padding: 50px 10px;
+    max-height: fit-content;
+  
 }
 
 #emptyCart h2{
     font-size: 20px;
-    color: #fe7d6a;
-    text-transform: uppercase;
+    color: #2e2e2e;
     word-spacing: 2px;
+    margin-bottom: 10px;
 }
+
+#go-to-cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#go-to-cart a{
+    padding: 8px 10px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#go-to-cart a:hover{
+    background-color: tomato;
+}
+
 
 .amount span{
     color: #333;
@@ -83,5 +127,53 @@ section .cart{
 .cartImg{
     width: 50px;
     height: 50px;
+}
+
+
+
+
+/*iamge animation*/
+.img-fluid-animated{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    width: 500px;
+    
+}
+
+@-webkit-keyframes up-down{
+    0%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes up-down{
+    0%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+@media(max-width:850px){
+    #emptyCart{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #go-to-cart{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:600px){
+    .img-fluid-animated{
+        width: 400px;
+    }
 }
 

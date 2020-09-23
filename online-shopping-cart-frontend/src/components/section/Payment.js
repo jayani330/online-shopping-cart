@@ -4,6 +4,8 @@ import '../css/Payment.css'
 import {Link} from 'react-router-dom'
 import {DataContext} from '../Context'
 
+import Paid from '../svg/cart1.jpg'
+
 
 
 export class Payment extends Component{
@@ -21,10 +23,17 @@ export class Payment extends Component{
         const{removeAll} = this.context;
 
         return(
-            <div id="payment">
-                 <h2 style={{textAlign:"center"}}>Payment is Successful!</h2>  
-                 
+
+            <div className="payment-wrapper">
+                <div id="payment">
+                    <div id="payment-done">
+                        <h2 style={{textAlign:"center"}}>Payment is Successful!</h2>  
+                        <Link to="/product">Go to Products</Link>
+                    </div>
+                    <img src={Paid} className="img-fluid-animated" alt="" />
+                </div>
             </div>
+                        
         )
     }
 }

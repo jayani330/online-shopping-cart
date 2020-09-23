@@ -77,7 +77,7 @@ export class DataProvider extends Component{
         total: 0
     };
 
-
+//to add products to the cart
     addCart = (id) =>{
         const {products, cart} = this.state;
 
@@ -98,6 +98,7 @@ export class DataProvider extends Component{
     };
 
 
+//reduce the count of a product item
     reduction = id =>{
         const{cart} = this.state;
         cart.forEach(item =>{
@@ -110,6 +111,7 @@ export class DataProvider extends Component{
     };
 
 
+//increase the count of a product item
     increase = id =>{
         const{cart} = this.state;
         cart.forEach(item =>{
@@ -122,6 +124,7 @@ export class DataProvider extends Component{
     };
 
 
+//remove the product from the cart
     removeProduct = id =>{
         if(window.confirm("Do you want to delete this product?")){
             const{cart} = this.state;
@@ -137,12 +140,14 @@ export class DataProvider extends Component{
     };
 
 
+//clear the whole cart when payment is done
     removeAll = () => {
         this.setState({cart: []});
     };
 
     
-    
+
+//to get the total items put in the cart
     getTotal = () =>{
         const{cart} = this.state;
         const res = cart.reduce((prev, item) =>{
@@ -152,11 +157,13 @@ export class DataProvider extends Component{
     }; 
 
 
+//called when component got updated - new props provided, internate state changed
     componentDidUpdate(){
         localStorage.setItem('dataCart', JSON.stringify(this.state.cart))
         localStorage.setItem('dataTotal', JSON.stringify(this.state.total))
     }
 
+//runs after the 1st render lifecycle, only on client side
     componentDidMount(){
         const dataCart = JSON.parse(localStorage.getItem('dataCart'));
         if(dataCart !== null){
@@ -168,8 +175,6 @@ export class DataProvider extends Component{
             this.setState({total: dataTotal});
         }
     }
-
-
 
 
     render(){

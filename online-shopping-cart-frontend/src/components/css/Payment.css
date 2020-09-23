@@ -1,12 +1,48 @@
-#payment{
-    box-shadow: 0 0 5px #ccc;
-    padding: 15px 10px;
+.payment-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
 }
 
-#payment h2{
+#payment{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0 5px #ccc;
+    padding: 50px 10px;
+    max-height: fit-content;
+}
+
+#payment-done h2{
     font-size: 20px;
-    color: #fe7d6a;
-    text-transform: uppercase;
+    color: #2e2e2e;
     word-spacing: 2px;
+    margin-bottom: 10px;
   
+}
+
+#payment-done a{
+    padding: 8px 10px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#payment-done a:hover{
+    background-color: tomato;
+}
+
+
+#payment-done{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

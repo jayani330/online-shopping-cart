@@ -6,8 +6,24 @@
 }
 
 #details{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 0 5px #ccc;
     padding: 15px 10px;
+    max-height: fit-content;
+    
+}
+
+.details-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: fit-content;
+    
 }
 
 .details img{
